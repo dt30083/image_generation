@@ -276,4 +276,15 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    enterprise_options={
+        '--output','--reserve-percent','--max-size-gb','--capacity-check-interval',
+        '--capacity-check-bytes','--nfs-mount','--allow-local-output','--wait-for-space',
+        '--capacity-poll-seconds','--complexity','--size-profile','--sensitivity-profile',
+        '--workers','--manifest','--dry-run','--synthetic-label','--records-per-file','--ocr-validate',
+    }
+    if any(arg.split('=',1)[0] in enterprise_options for arg in sys.argv[1:]):
+        from dspm.cli import main as enterprise_main
+        enterprise_main()
+    else:
+        main()

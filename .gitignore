@@ -6,3 +6,7 @@ venv/
 synthetic_images/
 dlp_test_images/
 .pytest_cache/
+corpus/
+*.manifest.jsonl
+*.manifest.coverage.json
+*.manifest.run.json

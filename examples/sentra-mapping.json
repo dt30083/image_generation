@@ -1,0 +1,4 @@
+{
+  "columns": {"path": "path", "categories": "categories", "status": "status", "synthetic": "synthetic"},
+  "classifications": {"pii": "pii", "pci": "pci", "phi": "phi", "financial": "financial"}
+}
